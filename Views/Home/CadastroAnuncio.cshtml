@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Cadastro Anuncio";
+    Anuncio anuncio = new Anuncio();
+}
+
+<h1 class="border-success Titulo mb-4">Cadastro Anúncio</h1>
+
+<body style="background-color: #f6f8ff;">
+    <form role="form">
+        <div class="form-group">
+            <div class="col-md-4">
+                <label class="control-label">Digite o código</label>
+                <input style="width:300px" type="number" class="form-control" id="codigo" placeholder="Codigo" value="" asp-for="@anuncio.Codigo" required />
+            </div>
+            <div class="col-md-8">
+                <label class="control-label">Digite a descrição</label>
+                <input style="width:700px" type="text" class="form-control" id="descricao" placeholder="Descrição" value="" asp-for="@anuncio.Descricao" required />
+            </div>
+
+            <div class="col-md-4">
+                <label class="control-label" for="marca">Selecione a marca</label>
+                <select style="width:300px" asp-for="@anuncio.Marca" onclick="cadastroaanuncio.carregarMarcas()" id="SelectMarca" class="form-control">
+                    <option selected hidden disabled value="">Selecione</option>
+
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label class="control-label" for="modelo">Selecione o modelo</label>
+                <select style="width:300px" asp-for="@anuncio.Modelo" onclick="cadastroaanuncio.carregarModelos()" id="SelectModelo" class="form-control">
+                    <option selected hidden disabled value="">Selecione</option>
+
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <label class="control-label">Digite o ano</label>
+                <input style="width:150px" type="number" class="form-control" id="ano" placeholder="Ano" value="" asp-for="@anuncio.Ano" required />
+            </div>
+            <div class="col-md-4">
+                <label class="control-label">Digite o valor da compra</label>
+                <input style="width:300px" type="number" class="form-control" id="valorCompra" placeholder="Valor Compra" value="" asp-for="@anuncio.ValorCompra" required />
+            </div>
+            <div class="col-md-4">
+                <label class="control-label">Digite o valor da venda</label>
+                <input style="width:300px" type="number" class="form-control" id="valorVenda" placeholder="Valor Venda" value="" asp-for="@anuncio.ValorVenda" required />
+            </div>
+            <div class="col-md-4">
+                <label class="control-label">Digite a data de venda</label>
+                <input style="width:300px" type="date" class="form-control" id="dataVenda" placeholder="Data Venda" value="" asp-for="@anuncio.DataVenda" required />
+            </div>
+            <div class="col-md-4">
+                <label class="control-label">Digite a cor</label>
+                <input style="width:300px" type="text" class="form-control" id="cor" placeholder="Cor" value="" asp-for="@anuncio.Cor" required />
+            </div>
+            <div class="col-md-4">
+                <label class="control-label">Digite o tipo de combustível</label>
+                <input style="width:300px" type="text" class="form-control" id="tipoCombustivel" placeholder="Tipo do Combustível" value="" asp-for="@anuncio.TipoCombustivel" required />
+            </div>
+        </div>
+</form>
+
+    <div class="col-md-12" align="center"style=" margin-top:8px" >
+        <button class="btn btn-success text-white" type="submit" onclick="cadastroaanuncio.getDados()" style="width:200px">Cadastrar</button>
+		<a asp-action="Voltar" class="btn btn-primary">Voltar</a>
+    </div>
+</body>
+@section Scripts{
+
+    <script src="~/js/CadastroAnuncio.js"></script>
+    <script type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+}

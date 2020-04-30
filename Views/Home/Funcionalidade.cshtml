@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+
+}
+
+    <h1 class="border-success Titulo mb-4">Cadastros / Alterações</h1>
+
+    <div class="row">
+        <div class="card-deck">
+            <button type="button" asp-action="CadastroMarca" class="btn btn-secondary btn-lg">Marcas</button>
+            <button type="button" asp-action="CadastroMarca" class="btn btn-secondary btn-lg">Nodelos</button>
+            <button type="button" asp-action="ListagemAnuncios" class="btn btn-secondary btn-lg">Anúncios</button>
+            <a asp-action="ListagemAnuncio" class="btn btn-secondary btn-lg">Novo</a>
+            <button type="button" asp-action="CadastroMarca" class="btn btn-secondary btn-lg">Gerar PDF</button>
+            <button type="button" asp-action="CadastroMarca" class="btn btn-secondary btn-lg">Usuario</button>
+            <div class="card">
+                <div class="card-body text-center p-3">
+                    <h5 class="card-title text-dark">Marcas</h5>
+                    <a class="btn btn-success">Novo</a>
+                    <a asp-action="AlterarCadastroMarca" class="btn btn-primary">Editar</a>
+                </div>
+            </div>
+            <div class="card">
+
+                <div class="card-body text-center p-3">
+                    <h5 class="card-title text-dark">Modelos</h5>
+                    <a asp-action="CadastroModelo" class="btn btn-success">Novo</a>
+                    <a asp-action="AlterarCadastroModelo" class="btn btn-primary">Editar</a>
+                </div>
+            </div>
+            <div class="card">
+
+                <div class="card-body text-center p-3">
+                    <h5 class="card-title text-dark">Anúncios</h5>
+                    <a asp-action="CadastroAnuncio" class="btn btn-success">Novo</a>
+                    <a asp-action="AlterarCadastroAnuncio" class="btn btn-primary">Editar</a>
+                </div>
+            </div>
+            <div class="card">
+
+                <div class="card-body text-center p-3">
+                    <h5 class="card-title text-dark">Gerar PDF</h5>
+                    <a asp-action="GerarPDF" class="btn btn-success">Gerar</a>
+                </div>
+            </div>
+            <div class="card">
+
+                <div class="card-body text-center p-3">
+                    <h5 class="card-title text-dark">Usuários</h5>
+                    <a asp-action="CadastroUsuario" class="btn btn-success">Novo</a>
+                    <a asp-action="AlterarCadastroUsuario" class="btn btn-primary">Editar</a>
+                </div>
+            </div>
+
+        </div>
+    </div>

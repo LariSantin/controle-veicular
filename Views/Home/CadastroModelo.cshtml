@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Cadastro Modelo";
+    Modelo marca = new Modelo();
+}
+
+<h1 class="border-success Titulo mb-4">Cadastro Modelo</h1>
+
+
+<body style="background-color: #f6f8ff;">
+
+    <form role="form">
+        <div class="col-md-12" style="margin-bottom:8px">
+            <label class="control-label">Digite a descrição</label>
+            <input type="text" class="form-control" id="descricaoModelo" placeholder="Descrição" value="" asp-for="@marca.Descricao" required />
+
+        </div>
+
+    </form>
+    <div align="left" class="col-md-offset-1 col-md-12" >
+        <button class="btn btn-success text-white" type="submit" onclick="cadastromodelo.getDados()" style="width:150px">Cadastrar</button>
+		<a asp-action="Voltar" class="btn btn-primary">Voltar</a>
+    </div>
+
+</body>
+@section Scripts{
+    <script src="~/js/CadastroModelo.js"></script>
+    <script type="text/javascript"></script>
+}

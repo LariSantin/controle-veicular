@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "ListagemAnuncios";
+}
+@model IList<Anuncio>;
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<div class="container">
+    <h3>Catálogo</h3>
+    <div class="list-group">
+        @foreach (var anuncio in Model)
+        {
+            <div class="list-group-item">
+                <div class="panel-body">
+
+                    <div class="col-md-2">
+                        <h3> @anuncio.Codigo "-" @anuncio.Descricao </h3>
+                    </div>
+                    <div class="col-md-2">
+                        <h3> @anuncio.Modelo.Descricao</h3>
+                    </div>
+                    <div class="col-md-2">
+                        <h3> @anuncio.Marca.Descricao</h3>
+
+                    </div>
+                    <div class="col-md-2">
+                        <h3> @anuncio.Cor</h3>
+                    </div>
+                    <div class="col-md-2">
+                        <h3> @anuncio.Ano</h3>
+                    </div>
+                    <div class="col-md-2">
+                        <h3> @anuncio.ValorCompra</h3>
+                    </div>
+                    <div class="col-md-2">
+                        <h3> @anuncio.ValorVenda</h3>
+                    </div>
+                    <div class="col-md-2">
+                        <h3> @anuncio.TipoCombustivel</h3>
+                    </div>
+                    <div class="col-md-2">
+                        <a asp-action="carrinho" asp-route-codigo="@anuncio.Id" class="btn btn-success">Editar</a>
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
+
+
+

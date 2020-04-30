@@ -1,0 +1,44 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagina inicial - DinheiroEmPenca</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+    <link href="~/css/EstiloIndex.css" rel="stylesheet" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
+<body style="background-color: #f6f8ff;">
+	<div class="box-parent-login">
+		<div  class="well bg-white box-login">
+			<h1 align="center" class="ls-login-logo">Controle Veicular</h1>
+			<form role="form">
+                <fieldset>
+
+                    <div class="form-group ls-login-user col-md-4">
+                        <label for="userLogin">Usuário</label>
+                        <input class="form-control" id="userLogin" type="text" aria-label="Usuário" placeholder="Usuário">
+                    </div>
+
+                    <div class="form-group ls-login-password col-md-4">
+                        <label for="userPassword">Senha</label>
+                        <input class="form-control" id="userPassword" type="password" aria-label="Senha" placeholder="Senha">
+                    </div>
+
+                 
+                    <div  class="col-md-offset-2 col-md-10">
+                        <button asp-action="Funcionalidade"  type="submit" class="btn btn-primary">Entrar</button>
+                    </div>
+
+                </fieldset>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

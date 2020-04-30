@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Cadastro Marca";
+    Marca marca = new Marca();
+}
+
+<h1 class="border-success Titulo mb-4">Cadastro Marca</h1>
+
+<body style="background-color: #f6f8ff;">
+    <form role="form">
+
+        <div  class="col-md-12" style="margin-bottom:8px">
+           
+            <label class="control-label">Digite a descrição</label>
+            <input type="text" class="form-control" id="descricaoMarca" placeholder="Descrição" value="" asp-for="@marca.Descricao" required />
+           
+        </div>
+    </form>
+
+    <div align="left" class="col-md-offset-1 col-md-12">
+        <button class="btn btn-success text-white" type="submit" onclick="cadastromarca.getDados()" style="width:150px">Cadastrar</button>
+        <a asp-action="Voltar" class="btn btn-primary">Voltar</a>
+    </div>
+</body>
+@section Scripts{
+
+    <script src="~/js/CadastroMarca.js"></script>
+    <script type="text/javascript"></script>
+}
