@@ -12,11 +12,11 @@
            
             <label class="control-label">Digite a descrição</label>
             <input type="text" class="form-control" id="descricaoMarca" placeholder="Descrição" value="" asp-for="@marca.Descricao" required />
-           
+            <label class="text-danger" id="validaDescricao"></label>
         </div>
     </form>
 
-    <div align="left" class="col-md-offset-1 col-md-12">
+    <div align="left" class="col-md-offset-0 col-md-12">
         <button class="btn btn-success text-white" type="submit" onclick="cadastromarca.getDados()" style="width:150px">Cadastrar</button>
         <a asp-action="Voltar" class="btn btn-primary">Voltar</a>
     </div>

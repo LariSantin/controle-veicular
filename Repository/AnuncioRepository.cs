@@ -22,7 +22,8 @@ namespace ControleVeicular.Repository
 
         public IList<Anuncio> GetAnuncios()
         {
-            return dbSet.ToList();
+            return dbSet.Include(a => a.Marca).Include(a => a.Modelo).ToList();
+            
         }
 
         public string SaveAnuncio(AnuncioBean anuncio)

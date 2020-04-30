@@ -7,50 +7,73 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-</head>
-<div class="container">
-    <h3>Catálogo</h3>
-    <div class="list-group">
-        @foreach (var anuncio in Model)
-        {
-            <div class="list-group-item">
-                <div class="panel-body">
-
-                    <div class="col-md-2">
-                        <h3> @anuncio.Codigo "-" @anuncio.Descricao </h3>
-                    </div>
-                    <div class="col-md-2">
-                        <h3> @anuncio.Modelo.Descricao</h3>
-                    </div>
-                    <div class="col-md-2">
-                        <h3> @anuncio.Marca.Descricao</h3>
-
-                    </div>
-                    <div class="col-md-2">
-                        <h3> @anuncio.Cor</h3>
-                    </div>
-                    <div class="col-md-2">
-                        <h3> @anuncio.Ano</h3>
-                    </div>
-                    <div class="col-md-2">
-                        <h3> @anuncio.ValorCompra</h3>
-                    </div>
-                    <div class="col-md-2">
-                        <h3> @anuncio.ValorVenda</h3>
-                    </div>
-                    <div class="col-md-2">
-                        <h3> @anuncio.TipoCombustivel</h3>
-                    </div>
-                    <div class="col-md-2">
-                        <a asp-action="carrinho" asp-route-codigo="@anuncio.Id" class="btn btn-success">Editar</a>
-                    </div>
-                </div>
-            </div>
-
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
         }
-    </div>
-</div>
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 6px;
+        }
+    </style>
+</head>
+<body style="background-color: #f6f8ff;">
+    <td class="container">
+        <h3>Anúncios cadastrados</h3>
+    <td class="list-group">
+        <table>
+            <tr>
+                <th>Código - Descrição</th>
+                <th>Modelo</th>
+                <th>Marca</th>
+                <th>Cor</th>
+                <th>Ano</th>
+                <th>Valor Compra</th>
+                <th>Valor Venda</th>
+                <th>Tipo Combustivel</th>
+                <th>Ação</th>
+            </tr>
+            @foreach (var anuncio in Model)
+            {
+                <tr>
+
+                    <td>
+                        <h4> @anuncio.Codigo - @anuncio.Descricao </h4>
+                    </td>
+                    <td>
+                        <h4> @anuncio.Modelo</h4>
+                    </td>
+                    <td>
+                        <h4> @anuncio.Marca</h4>
+                    </td>
+                    <td>
+                        <h4> @anuncio.Cor</h4>
+                    </td>
+                    <td>
+                        <h4> @anuncio.Ano</h4>
+                    </td>
+                    <td>
+                        <h4> @anuncio.ValorCompra</h4>
+                    </td>
+                    <td>
+                        <h4> @anuncio.ValorVenda</h4>
+                    </td>
+                    <td>
+                        <h4> @anuncio.TipoCombustivel</h4>
+                    </td>
+                    <td>
+                        <a asp-action="" asp-route-codigo="" class="btn btn-success">Editar</a>
+                    </td>
+                </tr>
+
+            }
+        </table>
+    </td>
+</body>
 
 
 

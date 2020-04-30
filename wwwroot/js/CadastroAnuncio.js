@@ -1,4 +1,60 @@
 ﻿class CadastroAnuncio{
+
+    validar(ano, valorCompra, valorVenda, codigo, descricao, cor, dataVenda, marca, modelo, tipoCombustivel) {
+        var valido = true;
+        $('.text-danger').html("")
+        if (ano === "") {
+            $('#validaAno').html("Obrigatório")
+            valido = false;
+        } 
+
+        if (valorCompra === "") {
+            $('#validaValorC').html("Obrigatório")
+            valido = false;
+        } 
+
+        if (!valorVenda) {
+            $('#validaValorV').html("Obrigatório")
+            valido = false;
+        } 
+
+        if (codigo === "") {
+            $('#validaCodigo').html("Obrigatório")
+            valido = false;
+        }
+
+        if (descricao === "") {
+            $('#validaDescricao').html("Obrigatório")
+            valido = false;
+        } 
+
+        if (cor === "") {
+            $('#validaCor').html("Obrigatório")
+            valido = false;
+        }
+
+        if (tipoCombustivel === "") {
+            $('#validaTipo').html("Obrigatório")
+            valido = false;
+        } 
+
+        if (dataVenda === "") {
+            $('#validaData').html("Obrigatório")
+            valido = false;
+        } 
+
+        if (marca === "") {
+            $('#validaMarca').html("Obrigatório")
+            valido = false;
+        } 
+
+        if (modelo === "") {
+            $('#validaModelo').html("Obrigatório")
+            valido = false;
+        } 
+
+        return valido;
+    }
     getDados() {
         var ano = document.getElementById('ano').value;
         var valorVenda = document.getElementById('valorVenda').value;
@@ -11,29 +67,33 @@
         var marca = document.getElementById('SelectMarca').value;
         var modelo = document.getElementById('SelectModelo').value;
 
-        var data = {
-            "codigo": codigo,
-            "descricao": descricao,
-            "dataVenda": dataVenda,
-            "cor": cor,
-            "valorCompra": valorCompra,
-            "valorVenda": valorVenda,
-            "ano": ano,
-            "tipoCombustivel": tipoCombustivel,
-            "idmarca": marca,
-            "idmodelo": modelo
+
+        var valido = this.validar(ano, valorCompra, valorVenda, codigo, descricao, cor, dataVenda, marca, modelo, tipoCombustivel)
+        if (valido) {
+            var data = {
+                "codigo": codigo,
+                "descricao": descricao,
+                "dataVenda": dataVenda,
+                "cor": cor,
+                "valorCompra": valorCompra,
+                "valorVenda": valorVenda,
+                "ano": ano,
+                "tipoCombustivel": tipoCombustivel,
+                "idmarca": marca,
+                "idmodelo": modelo
+            }
+
+            $.ajax({
+                type: 'POST',
+                url: '/home/cadastroanuncio',
+                contentType: 'application/json',
+                data: JSON.stringify(data)
+            }).done(function (response) {
+                alert(response)
+                location.reload()
+
+            });
         }
-
-        $.ajax({
-            type: 'POST',
-            url: '/home/cadastroanuncio',
-            contentType: 'application/json',
-            data: JSON.stringify(data)
-        }).done(function (response) {
-            alert(response)
-            location.reload()
-
-        });
         
     }
 
@@ -72,7 +132,4 @@
 
 var cadastroaanuncio = new CadastroAnuncio();
 
-$("#dataVenda").keydown(function () {
-    $("#dataVenda").mask("99/99/9999")
-});
 
