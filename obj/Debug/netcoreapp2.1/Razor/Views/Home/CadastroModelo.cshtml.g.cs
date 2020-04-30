@@ -75,17 +75,17 @@ using ControleVeicular.Models;
             WriteLiteral("\r\n<h1 class=\"border-success Titulo mb-4\">Cadastro Modelo</h1>\r\n\r\n\r\n");
             EndContext();
             BeginContext(152, 726, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8a665cbd7a9a4c35bc5d41151fd1052c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5952b361a6b74aaf995197ed05b756db", async() => {
                 BeginContext(193, 8, true);
                 WriteLiteral("\r\n\r\n    ");
                 EndContext();
                 BeginContext(201, 393, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ee786afd38254210b01ea7da117c7eeb", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b97d3c30385e4310bb380c1dd0bb3aa3", async() => {
                     BeginContext(219, 142, true);
                     WriteLiteral("\r\n        <div class=\"col-md-12\" style=\"margin-bottom:8px\">\r\n            <label class=\"control-label\">Digite a descrição</label>\r\n            ");
                     EndContext();
                     BeginContext(361, 132, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "96f39437449a44a19e0f577685ddcdd5", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8f0cdee338774aca98284874cc967890", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -136,7 +136,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 WriteLiteral("\r\n    <div align=\"left\" class=\"col-md-offset-0 col-md-12\" >\r\n        <button class=\"btn btn-success text-white\" type=\"submit\" onclick=\"cadastromodelo.getDados()\" style=\"width:150px\">Cadastrar</button>\r\n\t\t");
                 EndContext();
                 BeginContext(798, 57, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0cf129ffaf3d4d17be20e0d1553c3c28", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90ef0bfbc8c246cd92932cd49ce28180", async() => {
                     BeginContext(845, 6, true);
                     WriteLiteral("Voltar");
                     EndContext();
@@ -179,7 +179,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(903, 46, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3f1c32bd513c4151ae71fe01e7148718", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "542f9a600c6c40b5826e487463eec842", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
